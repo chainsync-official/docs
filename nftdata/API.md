@@ -39,7 +39,7 @@
       "contract": "0x769272677fab02575e84945f03eca517acc544cc",
       "name": "Captainz",
       "symbol": "Captainz",
-      "mirror": 1, // 0 normal collection 1 mirror collection
+      "mirror": 1, // 0 normal collection 1 mirror collection 2 not support mirror collection
       "mirrorData": {
         "chain_id": 137, // origin collection chain Id
         "contract": "0x769272677fab02575e84945f03eca517acc544cc", // origin collection contract address
@@ -142,7 +142,7 @@
           }
         ]
       },
-      "mirror": 1, // 1: this nft is a mirror nft 0: normal nft
+      "mirror": 1, // 1: this nft is a mirror nft 0: normal nft 2 this nft not support for mirror
       "mirrorData": {
         "chain_id": 137, // origin collection chain Id
         "contract": "0xa0e8a9941d1e1bc2ed25f138be6b0b51c059b298", // origin collection contract address
