@@ -142,15 +142,57 @@
           }
         ]
       },
-      "mirror": 1, // 1: this nft is a mirror nft 0: normal nft 2 this nft not support for mirror
+      "mirror": 1, // 1: this nft is a mirror nft 0: normal nft 
       "mirrorData": {
         "chain_id": 137, // origin collection chain Id
         "contract": "0xa0e8a9941d1e1bc2ed25f138be6b0b51c059b298", // origin collection contract address
         "name": "Bored Ape Yacht Club", // origin name
         "symbol": "BAYC" // origin symbol
       },
-      "mirrored": 0, // 1: this nft has syned mirror nft to destination chain Id 0: non syned
+      "mirrored": 0, // 1: this nft has syned mirror nft to destination chain Id 0: non syned 2 this nft not support for mirror
       "mirroredData": {} // if mirrored field returns 1 this field returns mirror nft data with same format like "mirrorData"
+    }
+  ]
+}
+```
+
+## get chain confs
+
+---
+
+#### api desc
+
+| URL                                                                                                                                                                             | request | version | status |
+| :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | :------ | :------ | :----- |
+| [https://nftdataapi.chainsync.network/api/mirrorchains](https://nftdataapi.chainsync.network/api/mirrorchains) | GET     | 1.0     | true   |
+
+#### return params
+
+| param name | type    | desc        |
+| :--------- | :------ | :---------- |
+| errno      | Integer | 0：succeed  |
+| data       | array   | confs |
+| ...        | ...     | ...         |
+
+#### return demo JSON
+
+```json
+{
+  "errno": 0,
+  "data": [
+    {
+      chainId: 1, // chainId
+      lastSyncBlock: 0,
+      mirrorFactoryContract: "",
+      mirrorFrom: 1,  // 1 means can mirror this chain's nft to other chains
+      mirrorTo: 0
+    },
+    {
+      chainId: 80001,
+      lastSyncBlock: 34808145,
+      mirrorFactoryContract: "0x4D19CFb55a6C96A857Ad2861f9cef9deDE0443E7", // mirror factory contract address when mirrorTo field is 1
+      mirrorFrom: 0,
+      mirrorTo: 1 // 1 means can mirror other chain's nft to this chain
     }
   ]
 }
