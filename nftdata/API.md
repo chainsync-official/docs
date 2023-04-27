@@ -77,7 +77,8 @@
 | :--------- | :------ | :------ | :------------------------------------------------------------- | :---- |
 | lastId     | Integer | false   | the last id for previous batch of nfts                         | 381   |
 | nonSynced  | Bool    | false   | only returns non synced nfts                                   | true  |
-| dstChainId | Integer | false   | only returns non synced nfts based on this destnation chain id | 80001 |
+|collectionContract|String|false|only returns this collection's nfts|0xa0e8a9941d1e1bc2ed25f138be6b0b51c059b298|
+| dstChainId | Integer | false   | returns mirrored and mirroredData field based on this destnation chain id | 80001 |
 
 #### return params
 
